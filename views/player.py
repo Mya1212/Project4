@@ -11,7 +11,7 @@ class PlayerViews:
         rank = input ('Entrez votre classement:\n>')
 
         data = {
-            "first_name":first_name,
+            "first_name":first_name, "last_name":last_name, "birthday":birthday, "sex":sex, "rank":rank
 
         }
         return data
@@ -32,22 +32,22 @@ class PlayerViews:
 
             if user_input=="1":
                 #create player
-                pass
+                print()
             
             elif user_input=="2":
                 #update player
-                pass
+                print()
 
             elif user_input=="3":
                #display list by name
-                pass
+                print()
 
             elif user_input=="4":
                 #display list by rank
-                pass
+                print("")
 
             elif user_input=="5":
-                self.menu.display_player_menu()
+                print("return main menu")
             
             else:
                 self.menu.display_message("Invalid choice")
