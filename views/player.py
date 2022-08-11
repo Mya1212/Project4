@@ -23,3 +23,31 @@ class PlayerViews:
     def update_player(self):
         #afficher liste des joueurs
         pass
+    
+    def update_player(self):
+        #a refaire pas input
+        while True:
+            self.menu.display_player_menu()
+            user_input=input()
+
+            if user_input=="1":
+                #create player
+                pass
+            
+            elif user_input=="2":
+                #update player
+                pass
+
+            elif user_input=="3":
+               #display list by name
+                pass
+
+            elif user_input=="4":
+                #display list by rank
+                pass
+
+            elif user_input=="5":
+                self.menu.display_player_menu()
+            
+            else:
+                self.menu.display_message("Invalid choice")

@@ -32,26 +32,4 @@ class Player:
         print ("sauvegarde du player")
 
 
-    def update_player(self):
-        #a refaire pas input
-        while True:
-            self.menu.display_player_menu()
-            user_input=input()
-
-            if user_input=="1":
-                #player list
-                #select player
-                #edit
-                pass
-            
-            elif user_input=="2":
-                #player list
-                #select player
-                #delete
-                pass
-
-            elif user_input=="3":
-                self.menu.display_player_menu()
-            
-            else:
-                self.menu.display_message("Invalid choice")
+    
