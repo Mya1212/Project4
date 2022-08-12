@@ -1,4 +1,8 @@
 from controlers.player import Player
+from tinydb import TinyDB, Query, where
+
+db = TinyDB('db.json')
+db_player = db.table("table_players")
 
 class Player:
     def __init__(self, first_name, last_name, birth_date, sex, rank) -> None:
@@ -27,9 +31,12 @@ class Player:
 
         return data_player
 
-    def save(self):
-        """ save the player to the database """
-        print ("sauvegarde du player")
+    def save_new_player(self):
+        db_player.insert(self.__dict__)
+
+    def update_player(self):
+        #db_player.update
+        pass
 
 
     

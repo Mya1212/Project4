@@ -7,24 +7,26 @@ class PlayerController:
     def __init__(self) -> None:
         self.player_view = PlayerViews
 
-    def update_player(self):
+    def menu_player(self):
         while True:
-            self.menu.display_player_menu()
+            self.player.user_player_menu_choice()
             user_input=input()
 
             if user_input=="1":
-                #player list
-                #select player
-                #edit
-                pass
+                self.player.create_player()
             
             elif user_input=="2":
-                #player list
-                #select player
-                #delete
-                pass
+                self.player.update_player()
 
             elif user_input=="3":
+                #sort by name
+                pass
+
+            elif user_input=="4":
+                #sort by rank
+                pass
+
+            elif user_input=="5":
                 self.menu.display_player_menu()
             
             else:

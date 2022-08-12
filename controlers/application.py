@@ -1,5 +1,6 @@
 from views.menu import MenuViews
 from sys import exit
+from controlers.player import PlayerController
 from tinydb import TinyDB
 
 class ApplicationController:
@@ -14,13 +15,14 @@ class ApplicationController:
            user_input=input()
 
            if user_input=="1":
-                self.menu.display_tournament_menu()
+                #self.tournament
+                pass
             
            elif user_input=="2":
-                self.menu.display_player_menu()
+                self.player.menu_player()
 
            elif user_input=="3":
-                self.menu.display_message("Good by.")
+                self.menu.display_message("Good bye")
                 exit()
             
            else:

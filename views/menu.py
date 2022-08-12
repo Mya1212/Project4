@@ -44,4 +44,4 @@ if __name__ == "__main__":
     print(__name__)
     
     menu = MenuViews()
-    menu.display_player_menu()
+    menu.display_main_menu()
