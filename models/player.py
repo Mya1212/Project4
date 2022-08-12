@@ -31,10 +31,10 @@ class Player:
 
         return data_player
 
-    def save_new_player(self):
+    def save_new_player(self, data:dict)->int:
         db_player.insert(self.__dict__)
 
-    def update_player(self):
+    def update_player(self, data:dict)->int:
         #db_player.update
         pass
 

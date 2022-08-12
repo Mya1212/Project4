@@ -19,10 +19,12 @@ class PlayerController:
                 self.player.update_player()
 
             elif user_input=="3":
+                #appeler db
                 #sort by name
                 pass
 
             elif user_input=="4":
+                #appeler db
                 #sort by rank
                 pass
 
