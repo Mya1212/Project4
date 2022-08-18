@@ -1,3 +1,4 @@
+from re import A
 from controlers.application import ApplicationController
 
 def main():
@@ -5,6 +6,6 @@ def main():
     app.start()
 
 if __name__ == "__main__":
-    
+  main()   
 
 

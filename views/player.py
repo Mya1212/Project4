@@ -19,7 +19,7 @@ class PlayerViews:
         print("error")
 
     def display_message(self, message: str):
-        """Print a message in the console"""
+        """Print a message in the console, le créer dans un menu views"""
         print(f"\n{message}\n")
 
     def create_player(self):

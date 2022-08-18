@@ -1,12 +1,11 @@
 from views.player import PlayerViews
-from models.player import PlayerModels
+from models.player import Player
 
 
 class PlayerController:
 
     def __init__(self) -> None:
         self.player_view = PlayerViews()
-        self.player_models = PlayerModels()
 
     def menu_player(self):
         while True:
@@ -30,7 +29,7 @@ class PlayerController:
                 break
 
             else:
-                self.display_message("Invalid choice")
+                self.player_view.display_message("Invalid choice")
 
 
     def display_player_name(self):
@@ -46,19 +45,22 @@ class PlayerController:
         #return player_list_rank
 
     def create_player(self):
+        print("create_player")
         data_player = self.player_view.create_player()
         player = Player(**data_player)
-        #player = Player(first_name=data_player["first_name"])
+        #evite de faire ça :player = Player(first_name=data_player["first_name"])
         player.save()
+        
 
     def update_player(self):
         """Update a player"""
         print("update player")
         input("Entrez")
 
-
+""""
 if __name__ == "__main__":
     player = Player("pierre", "dupont", "12-12-1988", "M", "800")
     print(player)
     data = player.serialize()
     print(data)
+"""

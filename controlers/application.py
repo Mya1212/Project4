@@ -24,8 +24,8 @@ class ApplicationController:
                 self.player_controller.menu_player()
 
             elif user_input == "3":
-                self.menu.display_message("Good bye")
+                self.player_views.display_message("Good bye")
                 exit()
 
             else:
-                self.menu.display_message("Invalid choice")
+                self.player_views.display_message("Invalid choice")
