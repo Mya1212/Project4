@@ -1,30 +1,31 @@
-from views.menu import MenuViews
 from sys import exit
 from controlers.player import PlayerController
+from views.player import PlayerViews
 from tinydb import TinyDB
+
 
 class ApplicationController:
 
     def __init__(self):
-        self.menu = MenuViews()
+        self.player_controller = PlayerController()
+        self.player_views = PlayerViews()
 
     def start(self):
 
         while True:
-           self.menu.display_main_menu()
-           user_input=input()
+            self.player_views.display_player_menu()
+            user_input = input("Entrez votre choix ")
 
-           if user_input=="1":
-                #self.tournament
+            if user_input == "1":
+                # self.tournament
                 pass
-            
-           elif user_input=="2":
-                self.player.menu_player()
 
-           elif user_input=="3":
+            elif user_input == "2":
+                self.player_controller.menu_player()
+
+            elif user_input == "3":
                 self.menu.display_message("Good bye")
                 exit()
-            
-           else:
-            self.menu.display_message("Invalid choice")
-        
+
+            else:
+                self.menu.display_message("Invalid choice")
